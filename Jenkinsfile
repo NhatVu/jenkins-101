@@ -10,6 +10,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                input 'Continue to next stage?'
+            }
+            steps {
                 echo "Building.."
                 sh '''
                 cd myapp
