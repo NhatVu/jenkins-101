@@ -1,6 +1,7 @@
 properties ([
         parameters ([
-            string(defaultValue: '', description: '', name : 'user_id')
+            string(defaultValue: '', description: 'user input', name : 'user_id')
+            string(defaultValue: 'master', description: 'git branch for building', name : 'branch_name')
         ])
 ])
 
