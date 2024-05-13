@@ -1,3 +1,9 @@
+properties ([
+        parameters ([
+            string(defaultValue: '', description: '', name : 'user_id')
+        ])
+])
+
 pipeline {
     agent { 
         node {
@@ -8,6 +14,12 @@ pipeline {
     //     pollSCM '* * * * *'
     // }
     stages {
+        stage('Login') {
+                steps {
+                    echo "Active user is now ${params.user_id}"
+                }
+        }
+        
         stage('Build') {
             steps {
                 echo "Building.."
