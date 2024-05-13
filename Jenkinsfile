@@ -10,10 +10,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                input 'Continue to next stage?'
-            }
-            steps {
                 echo "Building.."
+                input 'Continue to next stage?'
                 sh '''
                 cd myapp
                 pip install -r requirements.txt
